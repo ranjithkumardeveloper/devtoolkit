@@ -13,12 +13,6 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2 group">
-              <motion.div
-                whileHover={{ rotate: 180 }}
-                className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white"
-              >
-                <span className="font-bold">D</span>
-              </motion.div>
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 DevtoolKit
               </span>
