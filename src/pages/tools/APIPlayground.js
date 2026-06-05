@@ -18,14 +18,14 @@ const APIPlayground = () => {
   const handleSend = async () => {
     setLoading(true);
     setResponse(null);
-    
+
     const headerObj = headers.reduce((acc, curr) => {
       if (curr.key) acc[curr.key] = curr.value;
       return acc;
     }, {});
 
     const startTime = performance.now();
-    
+
     try {
       const res = await axios({
         method,
@@ -34,9 +34,9 @@ const APIPlayground = () => {
         headers: headerObj,
         validateStatus: () => true
       });
-      
+
       const endTime = performance.now();
-      
+
       setResponse({
         status: res.status,
         statusText: res.statusText,
@@ -100,14 +100,13 @@ const APIPlayground = () => {
                 className="flex-grow px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 border border-border outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
               />
             </div>
-            
+
             <motion.button
               whileTap={{ scale: 0.98 }}
               onClick={handleSend}
               disabled={loading}
-              className={`w-full py-3 rounded-xl font-bold flex items-center justify-center space-x-2 shadow-lg ${
-                loading ? 'bg-slate-400 cursor-not-allowed' : 'bg-primary hover:bg-primary-dark text-white shadow-primary/20'
-              }`}
+              className={`w-full py-3 rounded-xl font-bold flex items-center justify-center space-x-2 shadow-lg ${loading ? 'bg-slate-400 cursor-not-allowed' : 'bg-primary hover:bg-primary-dark text-white shadow-primary/20'
+                }`}
             >
               {loading ? (
                 <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>

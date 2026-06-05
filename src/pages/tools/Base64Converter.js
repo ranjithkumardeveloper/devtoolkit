@@ -100,7 +100,7 @@ const Base64Converter = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="flex justify-center">
           <div className="px-6 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-sm font-bold text-slate-500 flex items-center">
             Currently: <span className="text-primary ml-2 uppercase tracking-widest">{mode} Mode</span>
