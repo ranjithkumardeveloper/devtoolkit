@@ -69,8 +69,8 @@ const UUIDGenerator = () => {
           <div className="bg-card p-6 rounded-2xl border border-border">
             <h3 className="text-lg font-bold mb-4">What is a UUID?</h3>
             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-              A Universally Unique Identifier (UUID) is a 128-bit number used to identify information in computer systems. 
-              The v4 UUIDs generated here are randomly generated using a cryptographically strong random number generator. 
+              A Universally Unique Identifier (UUID) is a 128-bit number used to identify information in computer systems.
+              The v4 UUIDs generated here are randomly generated using a cryptographically strong random number generator.
               The probability of a duplicate is practically zero.
             </p>
           </div>
@@ -84,7 +84,7 @@ const UUIDGenerator = () => {
             {history.map((h, i) => (
               <div key={i} className="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-border group">
                 <span className="text-xs font-mono text-slate-500 truncate mr-2">{h}</span>
-                <button 
+                <button
                   onClick={() => copyToClipboard(h)}
                   className="text-slate-400 hover:text-primary transition-colors"
                 >

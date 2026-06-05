@@ -63,7 +63,7 @@ const JSONFormatter = () => {
         <div className="flex flex-col h-full">
           <div className="flex justify-between items-center mb-2 px-2">
             <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Input Raw JSON</span>
-            <button 
+            <button
               onClick={clearAll}
               className="text-slate-400 hover:text-red-500 transition-colors flex items-center text-sm"
             >
@@ -99,7 +99,7 @@ const JSONFormatter = () => {
           <div className="flex justify-between items-center mb-2 px-2">
             <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Formatted Output</span>
             {output && (
-              <button 
+              <button
                 onClick={copyToClipboard}
                 className="text-primary hover:text-primary-dark transition-colors flex items-center text-sm font-medium"
               >

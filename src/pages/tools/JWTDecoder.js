@@ -102,7 +102,7 @@ const JWTDecoder = () => {
             <p className="text-xs text-blue-700 dark:text-blue-300 flex items-start">
               <HiShieldCheck className="w-4 h-4 mr-2 flex-shrink-0 mt-0.5" />
               <span>
-                <strong>Note:</strong> Tokens are decoded locally in your browser. 
+                <strong>Note:</strong> Tokens are decoded locally in your browser.
                 Your sensitive data never leaves your machine.
               </span>
             </p>
