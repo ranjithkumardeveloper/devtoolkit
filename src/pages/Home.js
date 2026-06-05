@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  HiCode, 
-  HiLockClosed, 
-  HiLightningBolt, 
-  HiCube, 
-  HiAdjustments, 
+import {
+  HiCode,
+  HiLockClosed,
+  HiLightningBolt,
+  HiCube,
+  HiAdjustments,
   HiSearch,
   HiQrcode
 } from 'react-icons/hi';
@@ -91,7 +91,7 @@ const itemVariants = {
 const Home = () => {
   const [searchQuery, setSearchQuery] = React.useState('');
 
-  const filteredTools = tools.filter(tool => 
+  const filteredTools = tools.filter(tool =>
     tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     tool.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -99,14 +99,14 @@ const Home = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-16">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="text-4xl md:text-6xl font-extrabold mb-4"
         >
-          Devtool<span className="text-primary">Kit</span>
+          DevtoolKit
         </motion.h1>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -116,7 +116,7 @@ const Home = () => {
         </motion.p>
 
         {/* Search Bar */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -133,7 +133,7 @@ const Home = () => {
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -143,7 +143,7 @@ const Home = () => {
           <Link key={tool.id} to={tool.path}>
             <motion.div
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 translateY: -5,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
@@ -151,16 +151,16 @@ const Home = () => {
               className={`h-full p-8 rounded-2xl bg-card border border-border flex flex-col items-start transition-all duration-300 relative overflow-hidden group`}
             >
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${tool.color} blur-3xl -mr-8 -mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-              
+
               <div className="mb-4 relative z-10 p-3 rounded-xl bg-slate-100 dark:bg-slate-800">
                 {tool.icon}
               </div>
-              
+
               <h3 className="text-2xl font-bold mb-2 relative z-10">{tool.title}</h3>
               <p className="text-slate-500 dark:text-slate-400 relative z-10 flex-grow">
                 {tool.description}
               </p>
-              
+
               <div className="mt-6 flex items-center text-primary font-semibold relative z-10">
                 Open Tool
                 <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,7 +175,7 @@ const Home = () => {
       {filteredTools.length === 0 && (
         <div className="text-center py-20">
           <p className="text-slate-400 italic text-lg">No tools found matching "{searchQuery}"</p>
-          <button 
+          <button
             onClick={() => setSearchQuery('')}
             className="mt-4 text-primary font-bold hover:underline"
           >
