@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -12,10 +12,10 @@ const Footer = () => {
               Your one-stop utility belt for all developer needs.
             </p>
           </div>
-          
+
           <div className="flex space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/ranjithkumardeveloper"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-slate-500 hover:text-primary transition-colors"
@@ -23,20 +23,12 @@ const Footer = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ranjith-kumar-82535a2a3/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-slate-500 hover:text-primary transition-colors"
             >
               <FaLinkedin />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl text-slate-500 hover:text-primary transition-colors"
-            >
-              <FaFacebook />
             </a>
           </div>
         </div>
