@@ -10,6 +10,7 @@ import RegexTester from './pages/tools/RegexTester';
 import UUIDGenerator from './pages/tools/UUIDGenerator';
 import Base64Converter from './pages/tools/Base64Converter';
 import QRCodeGenerator from './pages/tools/QRCodeGenerator';
+import PasswordGenerator from "./pages/tools/PasswordGenerator";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/uuid-generator" element={<UUIDGenerator />} />
             <Route path="/base64-converter" element={<Base64Converter />} />
             <Route path="/qrcode-generator" element={<QRCodeGenerator />} />
+            <Route path="/password-generator" element={<PasswordGenerator />} />
             {/* Fallback for other tools */}
             <Route path="*" element={<Home />} />
           </Routes>

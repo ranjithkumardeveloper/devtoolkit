@@ -8,7 +8,8 @@ import {
   HiCube,
   HiAdjustments,
   HiSearch,
-  HiQrcode
+  HiQrcode,
+  HiKey
 } from 'react-icons/hi';
 
 const tools = [
@@ -66,6 +67,14 @@ const tools = [
     description: 'Create and customize QR codes for URLs or text.',
     icon: <HiQrcode className="w-8 h-8 text-indigo-500" />,
     path: '/qrcode-generator',
+    color: 'from-indigo-500/20 to-blue-500/20'
+  },
+  {
+    id: 'password-generator',
+    title: 'Password Generator',
+    description: 'Generate secure, customizable passwords with options for length, symbols, numbers, and uppercase letters.',
+    icon: <HiKey className="w-8 h-8 text-indigo-500" />,
+    path: '/password-generator',
     color: 'from-indigo-500/20 to-blue-500/20'
   }
 ];
