@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { HiOutlineClipboardCopy } from "react-icons/hi";
 import { HiArrowPath, HiXMark } from "react-icons/hi2";
-import { useTheme } from "../../context/ThemeContext";
 
 const PasswordGenerater = () => {
-    const { theme } = useTheme();
-
     const [randomPasswordLength, setRandomPasswordLength] = useState(15);
     const [password, setPassword] = useState("");
     const [mixedCase, setMixedCase] = useState(true);
@@ -15,18 +12,9 @@ const PasswordGenerater = () => {
     const [symbols, setSymbols] = useState(false);
     const [showModal, setShowModal] = useState(false);
 
-    useEffect(() => {
-        setPassword(generatePassword(randomPasswordLength));
-    }, [
-        randomPasswordLength,
-        mixedCase,
-        uppercase,
-        lowercase,
-        numbers,
-        symbols,
-    ]);
 
-    const generatePassword = (length) => {
+
+    const generatePassword = useCallback((length) => {
         let charset = "";
 
         if (mixedCase)
@@ -51,7 +39,11 @@ const PasswordGenerater = () => {
         }
 
         return generatedPassword;
-    };
+    }, [mixedCase, uppercase, lowercase, numbers, symbols]);
+
+    useEffect(() => {
+        setPassword(generatePassword(randomPasswordLength));
+    }, [randomPasswordLength, generatePassword]);
 
     const handleSliderChange = (event) => {
         setRandomPasswordLength(parseInt(event.target.value, 10));
