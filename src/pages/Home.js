@@ -12,6 +12,10 @@ import {
   HiKey
 } from 'react-icons/hi';
 
+import {
+  HiCircleStack
+} from 'react-icons/hi2';
+
 const tools = [
   {
     id: 'api-playground',
@@ -73,9 +77,17 @@ const tools = [
     id: 'password-generator',
     title: 'Password Generator',
     description: 'Generate secure, customizable passwords with options for length, symbols, numbers, and uppercase letters.',
-    icon: <HiKey className="w-8 h-8 text-indigo-500" />,
+    icon: <HiKey className="w-8 h-8 text-lime-500" />,
     path: '/password-generator',
-    color: 'from-indigo-500/20 to-blue-500/20'
+    color: 'from-indigo-500/20 to-teal-500/20'
+  },
+  {
+    id: 'sql-formatter',
+    title: 'SQL Formatter',
+    description: 'Format and beautify SQL queries for improved readability, consistency, and easier debugging.',
+    icon: <HiCircleStack className="w-8 h-8 text-cyan-500" />,
+    path: '/sql-formatter',
+    color: 'from-indigo-500/20 to-teal-500/20'
   }
 ];
 

@@ -11,6 +11,7 @@ import UUIDGenerator from './pages/tools/UUIDGenerator';
 import Base64Converter from './pages/tools/Base64Converter';
 import QRCodeGenerator from './pages/tools/QRCodeGenerator';
 import PasswordGenerator from "./pages/tools/PasswordGenerator";
+import SQLFormatter from "./pages/tools/SQLFormatter";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/base64-converter" element={<Base64Converter />} />
             <Route path="/qrcode-generator" element={<QRCodeGenerator />} />
             <Route path="/password-generator" element={<PasswordGenerator />} />
+            <Route path="/sql-formatter" element={<SQLFormatter />} />
             {/* Fallback for other tools */}
             <Route path="*" element={<Home />} />
           </Routes>
